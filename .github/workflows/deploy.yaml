@@ -47,6 +47,7 @@ jobs:
           username: ${{ secrets.SSH_USERNAME }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: ${{ secrets.SSH_PORT }}
+          command_timeout: 20m
           script: |
             cd /home/ci-cd-flutter
             docker-compose pull
